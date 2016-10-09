@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Inv. de Operaciones II</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../responsiveslides.css">
+  <link rel="stylesheet" href="demo.css">
+   <link rel="shortcut icon" href="images/uns.ico"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="../responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+        maxwidth: 1200,/*/////800////////*/
+        speed: 800
+      });
+
+    });
+  </script>
+
+  
+  <script >
+     var a=new Array(3);b=new Array(3);c=new Array(3)
+  function potencia()
+  {  n=parseInt(document.matriza[9].value)
+     for(i=1;i<=3;i++)
+       {   a[i]=[0,0,0,0];b[i]=[0,0,0,0];c[i]=[0,0,0,0]
+            for(j=1;j<=3;j++)
+             {  a[i][j]=parseFloat(document.matriza[3*i+j-4].value)
+                b[i][j]=a[i][j]    } }  
+     for (e=1;e<n;e++)
+       { for(i=1;i<=3;i++)
+         { for(j=1;j<=3;j++)
+           { c[i][j]=0
+                  for(k=1;k<=3;k++)
+                   {c[i][j]=c[i][j]+a[i][k]*b[k][j] } } }
+             for(i=1;i<=3;i++)
+         { for(j=1;j<=3;j++)
+           { b[i][j]=c[i][j] } } }
+     for(i=1;i<=3;i++)
+         { for(j=1;j<=3;j++)
+           { document.matrizan[3*i+j-4].value=c[i][j] } }
+   }
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+  <header>
+
+    <!-- Slideshow 1 -->
+    <ul class="rslides" id="slider1">
+      <li><img src="images/11.jpg" alt=""></li>
+      <li><img src="images/2.jpg" alt=""></li>
+      <li><img src="images/3.jpg" alt=""></li>
+    </ul>
+  </div>
+
+  </header>
+
+
+  <section>
+    <header>
+      <hgroup>
+        <center>
+        <h1>PRACTICA CALIFICADA</h1><br/>
+        <h3>POTENCIA DE MATRICES</h3>
+        </center>
+      </hgroup>
+    </header>
+
+  
+
+      <form name="matriza">
+              <BR><BR><BR>
+              <h1>MATRIZ</h1><BR>
+              <h2>A =</h2><BR>
+
+            <input type="text" size="15">
+            <input type="text" size="15">
+            <input type="text" size="15"><BR>
+            <input type="text" size="15">
+            <input type="text" size="15">
+            <input type="text" size="15"><BR>
+            <input type="text" size="15">
+            <input type="text" size="15">     
+            <input type="text" size="15"><BR><BR><BR>
+          <h4>Exponente N =</h4><BR>
+          <input type="text" size="3">
+          <input type="button" value="ACEPTAR" onClick="potencia()" color="blue">
+          <BR><BR><BR>
+      </form>
+
+      <form name="matrizan">
+
+            
+            <h1>MATRIZ A^n</h1><BR>
+              <h2>B =</h2><BR>
+            <input type="text" size="15">
+            <input type="text" size="15">
+            <input type="text" size="15"><BR>
+            <input type="text" size="15">
+            <input type="text" size="15">
+            <input type="text" size="15"><BR>
+            <input type="text" size="15">
+            <input type="text" size="15">     
+            <input type="text" size="15">
+  </form>
+
+  </section>
+
+  <footer>
+       <BR><BR><BR><h2>ALUMNOS :</h2>
+       <BR><h3>* Castillo Alejos Luis Enrique</h3>
+       FACEBOOK<A HREF="www.facebook.com/ruthsanchez"></A> 
+       <BR> <h3>* Ruth Sanchez Flores</h3><br><br>
+       <A HREF="www.facebook.com/ruthsanchez"></A>
+       <br><br>
+       INVESTIGACION DE OPERACIONES II
+    
+  </footer>
+
+</body>
+</html>
